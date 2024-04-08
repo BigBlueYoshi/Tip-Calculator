@@ -1,0 +1,109 @@
+body{
+    height: 100vh;
+    background: linear-gradient(to right,orange,black);
+    color: black;
+}
+.container{
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#calculator {
+    border: 1px solid rgb(0, 242, 255);
+    background:rgb(253, 253, 253);
+    border-radius: 5px;
+    width: 400px;
+    padding: 0 25px;
+    font-size: 1rem;
+    font-weight: 100;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+}
+#calculator button{
+    width: 10%;
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: orangered;
+}
+#calculator button:hover{
+    background-color:rgb(3, 255, 255);
+}
+#quality{
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#tip-amount{
+    visibility:hidden;
+    min-width:250px;
+    margin: auto;
+    margin: auto;
+    background: lime;
+    color: aliceblue;
+    bottom: 30px;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+}
+#tip-amount.show{
+    visibility:visible;
+    -webkit-animation:fadein 0.5s, fadeout 0.5s 2.5s;
+    animation:fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein{
+    from {bottom:0;opacity:0;}
+    to
+        {bottom:30px;opacity:1;}
+    
+}
+@keyframes fadein {
+    from {bottom:0;opacity:0;}
+    to
+        {bottom:30px;opacity:1;}
+}
+@-webkit-keyframes fadeout{
+    from{
+        bottom:30px;opacity: 1;
+    }
+    to{
+        bottom: 0px;opacity: 0;
+    }
+}
+@keyframes fadeout{
+    from { bottom:30; opacity: 1 ;} 
+
+    to
+        { bottom:0px;opacity:0;}
+}
+
+
+@media (max-width:480px){
+    .calculator input{
+        width: 85%;
+    }
+    .calculator button{
+        width: 15%;
+    }
+}
+.calculator button{
+    width: 15%;
+}
+@media(max-width:320px){
+    calculator input{
+        width: 80%;
+    }
+    .calculator button{
+        width: 20%;
+    }
+}
